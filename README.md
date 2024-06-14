@@ -4,19 +4,41 @@ This is a gem used to make calls to the Guild Wars 2 API.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ bundle add gw2-api
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ gem install gw2-api
 
 ## Usage
 
-TODO: Write usage instructions here
+To use the gem, first require it in the application, then create a new instance of the `Gw2::Api::Client` class:
+
+```ruby
+require 'gw2-api'
+
+client = Gw2::Api::Client.new(api_key: ENV["GW2_API_KEY"])
+
+puts client.account.body
+puts client.achievements(ids: "1840,910")
+```
+
+You can replace `ENV["GW2_API_KEY"]` with your own API Key, or set the env variable
+
+A list of available functions can be found `lib/gw2/modules`. 
+
+You can find valid parameters for each function in the [Guild Wars 2 API documentation](https://wiki.guildwars2.com/wiki/API:Main) or from the public [API-CDI](https://github.com/arenanet/api-cdi) repo.
+
+## Tests
+
+To run the tests, execute:
+
+    $ bundle exec rspec
+
+Note that you need to set a valid API key in the environment variable `GW2_API_KEY` to run the tests.
+GW2's API Availability can affect the result of the tests (if it's down, the tests will fail).
 
 ## Development
 
@@ -26,7 +48,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/gw2-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/gw2-api/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/nicholasrobertm/gw2-api.
 
 ## License
 
@@ -34,4 +56,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Gw2::Api project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/gw2-api/blob/main/CODE_OF_CONDUCT.md).
+Be a decent person, and don't be a jerk, it's that simple!

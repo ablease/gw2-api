@@ -5,7 +5,7 @@ require 'json'
 RSpec.describe Gw2::Api do
   context "Gw2::Api::Account" do
     before do
-      @client = Gw2::Api::Client.new(api_key: "F490A600-E0F0-B64B-AC7A-1B789634C71ECC367502-F029-4DFC-B072-29372DD5E309")
+      @client = Gw2::Api::Client.new(api_key: ENV["GW2_API_KEY"])
     end
 
     it "returns account info" do
