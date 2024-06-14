@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'json'
+require "json"
 
 RSpec.describe Gw2::Api do
   context "Gw2::Api::Account" do

@@ -13,7 +13,7 @@ module Gw2
       # - page: [String] the page number to filter
       # - page_size: [String] the page size to filter
       def achievements(params = {})
-        execute_with_params('achievements', params)
+        execute_with_params("achievements", params)
       end
 
       # Returns the achievements groups
@@ -24,7 +24,7 @@ module Gw2
       # - page: [String] the page number to filter
       # - page_size: [String] the page size to filter
       def achievements_groups(params = {})
-        execute_with_params('achievements/groups', params)
+        execute_with_params("achievements/groups", params)
       end
 
       # Returns the achievements categories
@@ -34,9 +34,8 @@ module Gw2
       # - ids: [String] the ids of the achievements to filter comma seperated
       # - page: [String] the page number to filter
       def achievements_categories(params = {})
-        execute_with_params('achievements/categories', params)
+        execute_with_params("achievements/categories", params)
       end
-
     end
   end
 end

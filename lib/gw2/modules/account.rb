@@ -17,7 +17,7 @@ module Gw2
       # - page: [String] the page number to filter
       # - page_size: [String] the page size to filter
       def account_achievements(params = {})
-        execute_with_params('account/achievements', params)
+        execute_with_params("account/achievements", params)
       end
 
       # Returns the account bank
@@ -135,7 +135,6 @@ module Gw2
       def account_wallet
         execute_request("account/wallet")
       end
-
     end
   end
 end

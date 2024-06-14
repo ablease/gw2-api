@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'json'
+require "json"
 
 RSpec.describe Gw2::Api do
   before do
@@ -21,5 +21,4 @@ RSpec.describe Gw2::Api do
     response = @client.achievements_categories
     expect(response.code).to eq("200")
   end
-
 end
