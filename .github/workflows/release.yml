@@ -1,4 +1,4 @@
-name: Run Guild Wars 2 API tests
+name: Release the Guild Wars 2 API gem
 
 on:
   release:
