@@ -1,0 +1,12 @@
+module Gw2
+  module Api
+    module Achievements
+      def achievements: -> Net::HTTP
+
+      def achievements_categories: -> Net::HTTP
+
+      def achievements_groups: -> Net::HTTP
+
+    end
+  end
+end

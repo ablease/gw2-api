@@ -1,0 +1,51 @@
+module Gw2
+  module Api
+    module Account
+      def account: -> Net::HTTP
+
+      def account_achievements: -> Net::HTTP
+
+      def account_bank: -> Net::HTTP
+
+      def account_dungeons: -> Net::HTTP
+
+      def account_dyes: -> Net::HTTP
+
+      def account_finishers: -> Net::HTTP
+
+      def account_gliders: -> Net::HTTP
+
+      def account_home_cats: -> Net::HTTP
+
+      def account_home_nodes: -> Net::HTTP
+
+      def account_inventory: -> Net::HTTP
+
+      def account_mail_carriers: -> Net::HTTP
+
+      def account_masteries: -> Net::HTTP
+
+      def account_mastery_points: -> Net::HTTP
+
+      def account_materials: -> Net::HTTP
+
+      def account_minis: -> Net::HTTP
+
+      def account_outfits: -> Net::HTTP
+
+      def account_pvp_heroes: -> Net::HTTP
+
+      def account_raids: -> Net::HTTP
+
+      def account_recipes: -> Net::HTTP
+
+      def account_shared_inventory: -> Net::HTTP
+
+      def account_skins: -> Net::HTTP
+
+      def account_titles: -> Net::HTTP
+
+      def account_wallet: -> Net::HTTP
+    end
+  end
+end

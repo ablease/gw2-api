@@ -1,0 +1,9 @@
+module Gw2
+  module Api
+    class Client
+      def execute_request: -> Net::HTTP
+
+      def execute_with_params: -> Net::HTTP
+    end
+  end
+end
