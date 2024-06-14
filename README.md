@@ -1,8 +1,6 @@
 # Gw2::Api
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gw2/api`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a gem used to make calls to the Guild Wars 2 API.
 
 ## Installation
 
