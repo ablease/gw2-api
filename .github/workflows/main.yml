@@ -7,6 +7,9 @@ on:
 
   pull_request:
 
+env:
+  GW2_API_KEY: ${{ secrets.GW2_API_KEY }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
