@@ -4,7 +4,7 @@ require "json"
 
 RSpec.describe Gw2::Api do
   before do
-    @client = Gw2::Api::Client.new(api_key: ENV["GW2_API_KEY"])
+    @client = Gw2::Api::Client.new(api_key: ENV.fetch("GW2_API_KEY", nil))
   end
 
   it "returns achievements" do

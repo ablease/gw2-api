@@ -5,7 +5,7 @@ require "json"
 RSpec.describe Gw2::Api do
   context "Gw2::Api::Account" do
     before do
-      @client = Gw2::Api::Client.new(api_key: ENV["GW2_API_KEY"])
+      @client = Gw2::Api::Client.new(api_key: ENV.fetch("GW2_API_KEY", nil))
     end
 
     it "returns account info" do
@@ -25,6 +25,11 @@ RSpec.describe Gw2::Api do
 
     it "returns account bank" do
       response = @client.account_bank
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account daily crafting" do
+      response = @client.account_daily_crafting
       expect(response.code).to eq("200")
     end
 
@@ -63,6 +68,21 @@ RSpec.describe Gw2::Api do
       expect(response.code).to eq("200")
     end
 
+    it "returns account jadebots" do
+      response = @client.account_jadebots
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account luck" do
+      response = @client.account_luck
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account legendary armory" do
+      response = @client.account_legendary_armory
+      expect(response.code).to eq("200")
+    end
+
     it "returns account mail carriers" do
       response = @client.account_mail_carriers
       expect(response.code).to eq("200")
@@ -88,8 +108,28 @@ RSpec.describe Gw2::Api do
       expect(response.code).to eq("200")
     end
 
+    it "returns account mount skins" do
+      response = @client.account_mounts_skins
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account mount types" do
+      response = @client.account_mounts_types
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account novelties" do
+      response = @client.account_novelties
+      expect(response.code).to eq("200")
+    end
+
     it "returns account outfits" do
       response = @client.account_outfits
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account progression" do
+      response = @client.account_progression
       expect(response.code).to eq("200")
     end
 
@@ -108,6 +148,11 @@ RSpec.describe Gw2::Api do
       expect(response.code).to eq("200")
     end
 
+    it "returns account skiffs" do
+      response = @client.account_skiffs
+      expect(response.code).to eq("200")
+    end
+
     it "returns account skins" do
       response = @client.account_skins
       expect(response.code).to eq("200")
@@ -121,6 +166,52 @@ RSpec.describe Gw2::Api do
     it "returns account wallet" do
       response = @client.account_wallet
       expect(response.code).to eq("200")
+    end
+
+    it "returns account wizard vault daily" do
+      response = @client.account_wizardsvault_daily
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account wizard vault listings" do
+      response = @client.account_wizardsvault_listings
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account wizard vault weeklies" do
+      response = @client.account_wizardsvault_weekly
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account world bosses" do
+      response = @client.account_worldbosses
+      expect(response.code).to eq("200")
+    end
+
+    it "returns commerce transactions" do
+      response = @client.commerce_transactions
+      expect(response.code).to eq("200")
+    end
+
+    it "returns account characters" do
+      response = @client.account_characters
+      expect(response.code).to eq("200")
+    end
+
+    it "returns a subtoken" do
+      response = @client.create_subtoken
+      expect(response.code).to eq("200")
+    end
+
+    it "returns token info" do
+      response = @client.token_info
+      expect(response.code).to eq("200")
+    end
+
+    it "returns 200s for alias functions" do
+      expect(@client.account_inventory.code).to eq("200")
+      expect(@client.account_mount_skins.code).to eq("200")
+      expect(@client.account_mount_types.code).to eq("200")
     end
   end
 end

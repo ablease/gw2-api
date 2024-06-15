@@ -1,9 +1,13 @@
 AllCops:
+  NewCops: enable
   Exclude:
     - 'gw2-api.gemspec'
   TargetRubyVersion: 2.6
 
 Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ModuleLength:
   Enabled: false
 
 Style/StringLiterals:

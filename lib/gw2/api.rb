@@ -22,7 +22,7 @@ module Gw2
       include Gw2::Api::Account
 
       def initialize(args)
-        @api_key = args[:api_key] || ENV["GW2_API_KEY"]
+        @api_key = args[:api_key] || ENV.fetch("GW2_API_KEY", nil)
         @base_url = "https://api.guildwars2.com/v2"
       end
 

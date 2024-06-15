@@ -6,7 +6,7 @@ RSpec.describe Gw2::Api do
   end
 
   it "can make a request" do
-    client = Gw2::Api::Client.new(api_key: ENV["GW2_API_KEY"])
+    client = Gw2::Api::Client.new(api_key: ENV.fetch("GW2_API_KEY", nil))
     response = client.execute_request("achievements?ids=1840,910")
     expect(response.code).to eq("200")
   end
