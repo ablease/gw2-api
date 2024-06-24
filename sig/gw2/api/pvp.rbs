@@ -1,0 +1,11 @@
+module Gw2
+  module Api
+    module Pvp
+      def pvp_games: -> Net::HTTP
+
+      def pvp_standings: -> Net::HTTP
+
+      def pvp_stats: -> Net::HTTP
+    end
+  end
+end

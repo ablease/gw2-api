@@ -4,6 +4,8 @@ require_relative "api/version"
 require "net/http"
 require_relative "modules/achievements"
 require_relative "modules/account"
+require_relative "modules/character"
+require_relative "modules/pvp"
 
 module Gw2
   module Api
@@ -20,6 +22,8 @@ module Gw2
     class Client
       include Gw2::Api::Achievements
       include Gw2::Api::Account
+      include Gw2::Api::Characters
+      include Gw2::Api::Pvp
 
       def initialize(args)
         @api_key = args[:api_key] || ENV.fetch("GW2_API_KEY", nil)

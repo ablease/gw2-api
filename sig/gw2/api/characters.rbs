@@ -1,0 +1,37 @@
+module Gw2
+  module Api
+    module Characters
+      def character_active_buildtabs: -> Net::HTTP
+
+      def character_active_equipmenttabs: -> Net::HTTP
+
+      def character_backstory: -> Net::HTTP
+
+      def character_buildtabs: -> Net::HTTP
+
+      def character_core: -> Net::HTTP
+
+      def character_crafting: -> Net::HTTP
+
+      def character_equipment: -> Net::HTTP
+
+      def character_equipmenttabs: -> Net::HTTP
+
+      def character_hero_points: -> Net::HTTP
+
+      def character_inventory: -> Net::HTTP
+
+      def character_quests: -> Net::HTTP
+
+      def character_recipes: -> Net::HTTP
+
+      def character_sab: -> Net::HTTP
+
+      def character_skills: -> Net::HTTP
+
+      def character_specializations: -> Net::HTTP
+
+      def characters: -> Net::HTTP
+    end
+  end
+end

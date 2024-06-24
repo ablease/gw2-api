@@ -31,6 +31,13 @@ A list of available functions can be found `lib/gw2/modules`.
 
 You can find valid parameters for each function in the [Guild Wars 2 API documentation](https://wiki.guildwars2.com/wiki/API:Main) or from the public [API-CDI](https://github.com/arenanet/api-cdi) repo.
 
+## Docs
+This project uses [YARD](https://yardoc.org/) for documentation. To generate the documentation, execute:
+
+    $ bundle exec yardoc 'lib/**/*.rb' - README.md LICENSE.md
+
+The documentation will be generated in the `doc` directory. You can view the documentation by running `yard server` and visiting `http://localhost:8808` in your browser.
+
 ## Tests
 
 To run the tests, execute:

@@ -57,10 +57,6 @@ module Gw2
         execute_with_params("characters/#{character_id}/equipmenttabs/active", params)
       end
 
-      def character_dungeons(character_id, params = {})
-        execute_with_params("characters/#{character_id}/dungeons", params)
-      end
-
       def character_hero_points(character_id, params = {})
         execute_with_params("characters/#{character_id}/heropoints", params)
       end

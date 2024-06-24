@@ -31,9 +31,11 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "rack", "~> 3.0.9.1"
   spec.add_dependency "rake", "~> 13.0"
   spec.add_dependency "rspec", "~> 3.0"
   spec.add_dependency "rubocop", "~> 1.21"
   spec.add_dependency "simplecov", "~> 0.21.2"
+  spec.add_dependency "yard", "~> 0.9.36"
 
 end
